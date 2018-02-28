@@ -7,8 +7,8 @@ import time
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
-        #self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
+        #self.driver = webdriver.Firefox()
         self.driver.get("https://www.facebook.com/")
         self.driver.maximize_window()
 
