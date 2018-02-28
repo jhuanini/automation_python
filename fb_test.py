@@ -2,6 +2,7 @@ import unittest
 from selenium import webdriver
 #waits for the page to load
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver import FirefoxOptions
 import time
 
 
@@ -9,6 +10,9 @@ class LoginTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
         #self.driver = webdriver.Firefox()
+        opts = FirefoxOptions()
+        opts.add_argument("--headless")
+        self = webdriver.Firefox(firefox_options=opts)
         self.driver.get("https://www.facebook.com/")
         self.driver.maximize_window()
 
