@@ -6,13 +6,13 @@ from selenium.webdriver.common.keys import Keys
 class PythonOrgSearch(unittest.TestCase):
     #set up usually starts with what browser to use
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
 
     #test case method/steps. Test case method should always start with the word test
     def test_search_in_python_org(self):
         #should create a local reference to the driver object
         driver = self.driver
-        driver.get("about:config")
+        driver.get("http://www.facebook.com")
 
 
     if __name__ == '__main__':
