@@ -13,6 +13,7 @@ class PythonOrgSearch(unittest.TestCase):
         #should create a local reference to the driver object
         driver = self.driver
         driver.get("http://www.facebook.com")
+        self.driver.find_element_by_id("email")
 
 
     if __name__ == '__main__':
