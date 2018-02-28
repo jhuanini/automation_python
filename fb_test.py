@@ -8,8 +8,14 @@ import time
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
-        #self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
+        #self.driver = webdriver.Firefox()
+        opts = FirefoxOptions()
+        opts.add_argument("security.sandbox.content.level",5)
+        #final FirefoxOptions options = new FirefoxOptions()
+        #profile.addPreference("security.sandbox.content.level", 5)
+        #driver = new
+        #FirefoxDriver(options);
         #opts = FirefoxOptions()
         #opts.add_argument("--headless")
         #self = webdriver.Firefox(firefox_options=opts)
