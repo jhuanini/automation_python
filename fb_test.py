@@ -8,12 +8,12 @@ import time
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
-        #self.driver = webdriver.Firefox()
+        #self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
+        self.driver = webdriver.Firefox()
         #opts = FirefoxOptions()
         #opts.add_argument("--headless")
         #self = webdriver.Firefox(firefox_options=opts)
-        self.driver.set_page_load_timeout(30)
+        #self.driver.set_page_load_timeout(30)
         self.driver.get("https://www.facebook.com/")
         self.driver.maximize_window()
 
