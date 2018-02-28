@@ -21,7 +21,7 @@ class LoginTest(unittest.TestCase):
         #opts.add_argument("--headless")
         #self = webdriver.Firefox(firefox_options=opts)
         #self.driver.set_page_load_timeout(30)
-        #self.driver.get("https://www.facebook.com/")
+        self.driver.get("https://www.facebook.com/")
         #self.driver.maximize_window()
 
     #test case method
