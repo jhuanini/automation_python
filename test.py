@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+#from selenium.webdriver.common.keys import Keys
 
 #create test case
 class PythonOrgSearch(unittest.TestCase):
@@ -13,7 +13,8 @@ class PythonOrgSearch(unittest.TestCase):
         #should create a local reference to the driver object
         driver = self.driver
         driver.get("http://www.facebook.com")
-        self.driver.find_element_by_id("email")
+        #self.driver.find_element_by_id("email")
+        assert "hello" in self.driver.title
 
 
     if __name__ == '__main__':
