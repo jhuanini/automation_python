@@ -8,7 +8,7 @@ import time
 
 class LoginTest(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         #self.driver = webdriver.Firefox(executable_path='D:\misc\Installers\Web_Automation\geckodriver-v0.19.1-win64\geckodriver.exe')
         #self.driver = webdriver.Firefox()
         #opts = FirefoxOptions()
@@ -36,9 +36,9 @@ class LoginTest(unittest.TestCase):
         loginbuttonxpath = '//*[@id="u_0_2"]'
         fblogocssselector = 'span._2md'
 
-        fbusernameelement = WebDriverWait(driver,1).until(lambda driver: driver.find_element_by_id(fbusernameid))
-        fbpwelement = WebDriverWait(driver,1).until(lambda driver: driver.find_element_by_id(fbpwid))
-        loginbuttonelement = WebDriverWait(driver,1).until(lambda driver: driver.find_element_by_xpath(loginbuttonxpath))
+        fbusernameelement = WebDriverWait(driver,5).until(lambda driver: driver.find_element_by_id(fbusernameid))
+        fbpwelement = WebDriverWait(driver,5).until(lambda driver: driver.find_element_by_id(fbpwid))
+        loginbuttonelement = WebDriverWait(driver,5).until(lambda driver: driver.find_element_by_xpath(loginbuttonxpath))
         fbusernameelement.clear()
         fbusernameelement.send_keys(fbusername)
         fbpwelement.clear()
