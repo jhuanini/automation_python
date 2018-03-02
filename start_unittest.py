@@ -1,16 +1,16 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.firefox.options import Options
 
 #create test case
 class PythonOrgSearch(unittest.TestCase):
     #set up usually starts with what browser to use
     def setUp(self):
 
-        self.driver = webdriver.Firefox()
-        opts = Options()
-        opts.set_preference("security.sandbox.content.level",5)
+        #self.driver = webdriver.Firefox()
+        #opts = Options()
+        #opts.set_preference("security.sandbox.content.level",5)
 
 
 
@@ -21,7 +21,7 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         driver.get("http://www.python.org")
         #syntax of assert is different compared with non-unittest code
-        self.assertIn("Python",driver.title)
+        self.assertIn("Pythones",driver.title)
         elem = driver.find_element_by_name("q")
         elem.send_keys("pycon")
         elem.send_keys(Keys.RETURN)
