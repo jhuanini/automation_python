@@ -14,7 +14,7 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         driver.get("http://www.facebook.com")
         #self.driver.find_element_by_id("email")
-        assert "hello" in self.driver.title
+        assert "facebook" in self.driver.title
 
 
     if __name__ == '__main__':

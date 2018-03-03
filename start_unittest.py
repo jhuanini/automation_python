@@ -16,7 +16,7 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         driver.get("http://www.python.org")
         #syntax of assert is different compared with non-unittest code
-        self.assertIn("Pythonage",driver.title)
+        self.assertIn("Python",driver.title)
         elem = driver.find_element_by_name("q")
         elem.send_keys("pycon")
         elem.send_keys(Keys.RETURN)
