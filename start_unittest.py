@@ -7,12 +7,7 @@ from selenium.webdriver.common.keys import Keys
 class PythonOrgSearch(unittest.TestCase):
     #set up usually starts with what browser to use
     def setUp(self):
-
-        #self.driver = webdriver.Firefox()
-        #opts = Options()
-        #opts.set_preference("security.sandbox.content.level",5)
-
-
+        self.driver = webdriver.Firefox()
 
 
     #test case method/steps. Test case method should always start with the word test
@@ -21,7 +16,7 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         driver.get("http://www.python.org")
         #syntax of assert is different compared with non-unittest code
-        self.assertIn("Pythones",driver.title)
+        self.assertIn("Pythonage",driver.title)
         elem = driver.find_element_by_name("q")
         elem.send_keys("pycon")
         elem.send_keys(Keys.RETURN)
